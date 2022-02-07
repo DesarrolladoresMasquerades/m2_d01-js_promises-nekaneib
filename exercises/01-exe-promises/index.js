@@ -34,8 +34,8 @@ console.log("Waiting for the fake server to reply...");
 const serverResponse = new Promise(responseHandler);
 
 serverResponse
-  .then((data) => updateDOMWithData(data))
-  .catch((error) => updateDOMWithError(error));
+  .then(updateDOMWithData)
+  .catch(updateDOMWithError);
 
 function updateDOMWithData(data) {
   const html = document.createElement("div")
